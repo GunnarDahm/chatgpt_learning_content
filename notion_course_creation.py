@@ -47,7 +47,7 @@ def get_subtopics(master_topic, topic):
     return response['choices'][0]['message']['content'].strip()
 
 
-def create_notion_page(database_id, title, summary, depth, parent_page_id=None):
+def create_obsidian_page(database_id, title, summary, depth, parent_page_id=None):
     new_page = {
         "Name": {"title": [{"text": {"content": f"{title}"}}]},
         "Summary": {"rich_text": [{"text": {"content": f"{summary}"}}]},
